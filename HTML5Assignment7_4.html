@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5Assignment7.4</title>
+	<script type="text/javascript">
+	
+		//Outer Function
+		function provideName(firstName, lastName){
+
+			this.firstName= firstName;
+			this.lastName= lastName;
+
+			var bioText ="My Name is ";
+			// Nested Function:
+			return function(){
+				// Using parameters: firstName and lastName 
+				//Using bioText variable defined in outer function
+				document.write("<h1>Welcome to Acadgild!!</h1><b>"+ bioText + firstName +" "+ lastName +".</b>");
+			}
+
+			createBio();
+		}
+
+		// Outer Function instance
+		var bio = provideName("Rahul","Gautam");
+
+		// Calling inner function
+		bio();
+	</script>
+</head>
+<body>
+</body>
+</html>
